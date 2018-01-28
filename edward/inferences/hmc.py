@@ -8,8 +8,7 @@ import tensorflow as tf
 from edward.models import Trace
 from edward.models.core import Node
 from edward.inferences import docstrings as doc
-from edward.inferences.inference import (
-    call_function_up_to_args, make_intercept)
+from edward.inferences.util import call_function_up_to_args, make_intercept
 
 
 @doc.set_doc(

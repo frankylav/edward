@@ -6,8 +6,8 @@ import six
 import tensorflow as tf
 
 from edward.inferences import docstrings as doc
-from edward.inferences.inference import call_function_up_to_args
 from edward.inferences.map import map
+from edward.inferences.util import call_function_up_to_args
 from edward.models import RandomVariable
 from edward.models.queries import get_variables
 
