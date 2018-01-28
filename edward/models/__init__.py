@@ -8,6 +8,7 @@ from edward.models.core import *
 from edward.models.dirichlet_process import *
 from edward.models.param_mixture import *
 from edward.models.random_variable import RandomVariable
+from edward.models.random_variable import random_variables as _random_variables
 from edward.models.random_variables import *
 
 from tensorflow.python.util.all_util import remove_undocumented
@@ -19,6 +20,7 @@ _allowed_symbols = [
     'RandomVariable',
     'Trace',
     'primitive',
+    'random_variables',
 ]
 for name in dir(_module):
   obj = getattr(_module, name)
@@ -26,5 +28,7 @@ for name in dir(_module):
           issubclass(obj, RandomVariable) and
           obj != RandomVariable):
     _allowed_symbols.append(name)
+
+random_variables = _random_variables
 
 remove_undocumented(__name__, allowed_exception_list=_allowed_symbols)
